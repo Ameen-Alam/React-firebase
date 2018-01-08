@@ -1,0 +1,146 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.bg-default{
+  background-color: #698685;
+  color: #fff;
+  border-radius: 250% 250% 25% 25%;
+  padding: 15px;
+}
+.bg-default a{
+  color: #fff;
+  text-decoration: none
+}
+.click{
+  color: #dd1111;
+}
+.click:hover , .click:focus{
+  color: #fff000;
+}
+.from-submit:hover{
+  box-shadow: 3px 3px 2px 4px #ddd;
+
+}
+.from-submit {
+  box-shadow: 2px 2px 2px 2px #eee;
+  border-radius: 30%;
+  padding: 40px;
+}
+.from-submit-div{
+  padding: 40px;
+}
+.width{
+  width: 25%;
+  border-radius: 125px;;
+  padding: 1px
+}
+.bg-color{
+  background: #dd1111;
+  color: black;
+}
+.font-weight-bold{
+  font-weight: bold;
+}
+.center{
+  text-align: center;
+}
+.navigation-bar{
+  background-color: #fff000
+}
+.navigation-bar-line{
+  background: rgb
+}
+.font-weight-bold{
+  font-weight: 600;
+  color: #dd1111;
+}
+.man-navigation-bar{
+  background: #798675;
+  color: #fff;
+}
+.nav-ul .li{
+  display: inline-block;
+  padding: 10px 20px;
+  color:  #fff;
+  outline: none;
+  cursor: pointer;
+}
+.nav-ul .li:hover  {
+  color:  #ddd;
+  line-height: 1.5em;
+  text-decoration: none;
+  border-bottom: 2px solid #000000;
+  outline: none
+}
+/* .nav-ul .li:active {
+  text-decoration: line-through
+} */
+.nav-ul .active1 , .nav-ul .active2 ,.nav-ul .active3{
+  border-bottom: 2px solid #000;
+  outline: none
+}
+.back{
+  background: #aaa;
+  color: #fff
+}
+.database-bg{
+  background: #ddd;
+  margin: 20px;
+  color: #222;
+  border-width: 0px ,2px, 1px, 2px ;
+  border-bottom-style: solid;
+  border-color: #fff, #6787, #222, #6787;
+  border-radius: 20%;
+  padding: 8px
+}
+@media (max-width : 580px){
+  .left {
+    text-align: left;
+    display: none
+  }
+  .center {
+    text-align: center;
+    display: block;
+  }
+  .right {
+    text-align: right;
+    display: none
+  }
+}
+@media (min-width : 580px){
+  .left {
+    text-align: left;
+  }
+  .center {
+    text-align: center;
+  }
+  .right {
+    text-align: right;
+  }
+}
