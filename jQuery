@@ -1,0 +1,203 @@
+ $(documents).ready(function(){
+$('elemets').fadeIn(2000)
+})
+actions :
+.hide(4000)
+$('li:even').addClass("red")
+'li:odd'
+'li:first'
+'li:last'
+'li:eq(index)'
+$('p').click(function(){
+  $(this).hide()
+})
+$('#clickme').fadeToggle("slow")
+$('#clickme').toggle("slow") // for show hide
+$('#clickme').slideToggle("slow")
+$('#clickme').slideDown("slow")
+$('#clickme').slideUp("slow")
+$(':header').fadeOut("fast/slow") /// for headings all
+$('.first').delay(4000).fadeOut(1000)
+$('.stopme').stop()
+
+$('h2:not(h2.no)').fadeOut(2000)
+$('h2:not(h2:eq(index))').fadeOut(2000)
+$("#show").click(function(){
+  $("p:contains('find_any_name')").fadeIn() // .show()
+})
+$('a[title=about]').fadeOut(2000)
+$('a[title=Words]').fadeOut(2000)
+$('a[title^=startingWords]').fadeOut(2000)
+$('a[title&=endtingWords]').fadeOut(2000)
+$(':input').addClass('blue')
+$(':input:text').addClass('blue')
+$(':input').click(function(){
+  $(this).addClass('blue')
+})
+$('#status').keyup(function(){
+  var len = $('#status').val().length;
+  $('.first').text(len)
+})
+$('#status').keyup(function(){
+  var len = $('#status').val().length;
+
+  if(len <= 1){
+  $('.first').text('')  
+  $('.first).removeClass('red')
+  $('.first).removeClass('orange')
+  $('.first).removeClass('green')
+  }
+
+  else if(len <= 4){
+  $('.first').text('weak')  
+  $('.first).addClass('red')
+  $('.first).removeClass('orange')
+  $('.first).removeClass('green')
+  }
+
+  else if(len <= 8){
+  $('.first').text('good') 
+  $('.first).addClass('orange') 
+  $('.first).removeClass('red')
+  $('.first).removeClass('green')
+  }
+
+  else{
+  $('.first').text('Strong')  
+  $('.first).addClass('green')
+  $('.first).removeClass('orange')
+  $('.first).removeClass('red')
+  }
+
+})
+
+$(':input').focusin(function(){
+  $(this).addClass('color')
+})
+
+$(':input').focusout(function(){
+  $(this).removeClass('color')
+  $(this).text('')
+})
+
+$('#username').focusin(function(){
+  $('.spanClass').text('enter user')
+})
+
+
+$('#password').focusin(function(){
+  $('.spanClass').text('enter Password')
+})
+
+$('#show').mouseover(function(){
+  $('#show').val('put your mouse bak to hide')
+  $('.box').show()
+})
+
+$('#show').mouseout(function(){
+  $('#show').val('Hover here to show')
+  $('.box').hide()
+})
+
+$(documents).ready(function(){
+  var color = $(#list).val();
+  $('body').css('background', color)
+
+  $('#list').change(function(){
+    var color = $(#list).val();
+    $('body').css('background', color)
+  })
+
+})
+
+
+$('p').live("click", function(){
+  $(this).after("<p>This is another paragraph tag </p>")
+})
+
+$('#b1').click(function(){
+  $('.one').text('Hover you mouse over here to hide it');
+  $('.one').bind("mouseover", function(){
+    $(this).hide(4000)
+  })
+})
+
+$('#b2').click(function(){
+  $('.one').unbind("mouseover")
+  $('.one').text('it will not work now');
+})
+
+$('#first').click(fuction(){
+  $('.one').css('width','300px')
+})
+
+$('#first').click(fuction(){
+  $('.one').animate({width:"300px"}, 4000)
+})
+
+$('#first').click(fuction(){
+  $('.one').animate({left:"+=50px"}, 2000)
+})
+
+$('p.one').append("This is append new text") // add end
+$('p.one').prepend("This is append new text") // add start
+$('p.one').html("<img src='12.png' />")
+$('.one').find('p').css('background','blue')
+
+$(li.one).each(function(){
+  alert($(this).text().length);
+  alert($('li.one').text().length);  // total ayega
+})
+
+$('#btn').click(function(){
+  $('#extended').load('ext.html');
+})
+$('li').hover(function(){
+  $(this).find('ul>li').stop().sildeToggle(200);
+})
+
+
+JQUERY UI
+
+$(documents).ready(function(){
+  $('#one').accordion()
+})
+$(documents).ready(function(){
+  $('#one').accordion({
+    event: "mouseover",
+    active:0
+    
+  })
+})
+
+$('#one').tooltip(); // for title styling
+//for styling   .ui-tooltip{ css : 400px }
+$('#two').tooltip({
+  show: 'fade',
+  hide: 'explode'
+})
+
+$('#mytabs').tabs();
+$('#mytabs').tabs({
+  event: 'mouseover'
+});
+//for styling   .ui-tabs , .ui-tabs-nav , .ui-tabs-active { css : 400px }
+
+$('#box').dialog({
+  show: 'bounce', // explode , puff , shake
+  hide: 'fold' , // 
+});
+//for styling   .ui-dialog , .ui-dialog-titlebar , .ui-dialog-active { css : 400px }
+
+$('#cal').datepicker({
+  numberOfMonths: 3,
+  dateFormat: "d-mm-yy" // for date and "DD-MM-yy" for date day name means sunday June
+});  // for input:type text ko datepicker
+
+$('drageme').draggable({
+  containment: "#wrapper" // id div
+  axis : "x"
+})
+
+$('#wrapper').sortable();
+
